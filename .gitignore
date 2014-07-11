@@ -1,0 +1,9 @@
+assets/*
+!assets/.gitignore
+
+#netbeans project files
+nbproject
+
+app/runtime/*
+!app/runtime/.gitignore
+
