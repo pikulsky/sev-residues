@@ -27,8 +27,16 @@ class Controller extends CController
 	{
 		// build menu depending on user's role
 		$this->menuItems = $this->_getMenuItems();
-		
+
 		parent::init();
+	}
+
+	public function beforeRender($view)
+	{
+		// enable AngularJs for all pages
+		Yii::app()->clientScript->registerPackage('angularjs');
+
+		return true;
 	}
 
 	protected function _getMenuItems()
@@ -64,7 +72,7 @@ class Controller extends CController
 				'class' => 'bootstrap.widgets.TbMenu',
 				'items' => array(
 					array('divider' => true),
-					array('label' => Yii::t('main', 'Login'), 'url' => array('/login/index')),
+					//array('label' => Yii::t('main', 'Login'), 'url' => array('/login/index')),
 				),
 			),
 		);

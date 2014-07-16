@@ -17,10 +17,10 @@ return array(
 	'basePath' => $homePath,
 	'runtimePath' => $runtimePath,
 
-	'name' => 'SP',
+	'name' => 'Res',
 
 	// not used for now
-	//'defaultController' => 'site',
+	'defaultController' => 'search',
  
 	'language' => 'ru',
 
@@ -41,7 +41,7 @@ return array(
 		// uncomment the following to enable the Gii tool
 		'gii' => array(
 			'class' => 'system.gii.GiiModule',
-			'password' => 'sp',
+			'password' => 'res',
 			'generatorPaths' => array(
 				'application.gii',
 			),			
@@ -97,6 +97,14 @@ return array(
 		'bootstrap' => array(
 			'class' => 'ext.bootstrap.components.Bootstrap',
 			'responsiveCss' => true,
+		),
+		'clientScript' => array(
+			'packages' => array(
+				'angularjs' => array(
+					'basePath' => 'application.assets.js',
+					'js' => array('angular.min.js'),
+				)
+			),
 		),
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
