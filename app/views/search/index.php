@@ -16,6 +16,17 @@
 			</div>
 		</div>			
 
+		
+		<!-- MAIN CONTENT AND INJECTED VIEWS -->
+		<div id="main">
+			{{ message }}
+
+			<div ng-view></div>
+			<!-- angular templating -->
+			<!-- this is where content will be injected -->
+			
+		</div>
+
 
 	</div><!--/row-->	
 </div>

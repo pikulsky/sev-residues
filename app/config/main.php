@@ -101,8 +101,13 @@ return array(
 		'clientScript' => array(
 			'packages' => array(
 				'angularjs' => array(
-					'basePath' => 'application.assets.js',
-					'js' => array('angular.min.js'),
+					'basePath' => 'application.assets.js.angularjs',
+					'js' => array('angular.js','angular-route.js'),
+				),
+				'angular-loading-bar' => array(
+					'basePath' => 'application.assets.js.angular-loading-bar',
+					'js' => array('loading-bar.js'),
+					'css' => array('loading-bar.css'),
 				)
 			),
 		),

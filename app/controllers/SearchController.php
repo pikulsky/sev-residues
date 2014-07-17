@@ -8,6 +8,12 @@ class SearchController extends Controller
 	 */
 	public function actionIndex()
 	{
+		Yii::app()->getClientScript()->registerScriptFile(
+			Yii::app()->assetManager->publish(
+				Yii::getPathOfAlias('application.assets.js').'/app.js'
+			)
+		);
+
 		$renderOptions = array(
 		);
 		$this->render('index', $renderOptions);

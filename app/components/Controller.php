@@ -35,6 +35,8 @@ class Controller extends CController
 	{
 		// enable AngularJs for all pages
 		Yii::app()->clientScript->registerPackage('angularjs');
+		// AngularJs loading bar
+		Yii::app()->clientScript->registerPackage('angular-loading-bar');
 
 		return true;
 	}
